@@ -16,7 +16,7 @@ const writeFile = fileContent => {
 };
 const copyFile = () => {
     return new Promise((resolve, reject) => {
-        fs.copyFile('./app.js', copyFile, err => {
+        fs.copyFile('./app.js', Promise, err => {
             if (err) {
                 reject(err);
                 return;
@@ -30,4 +30,4 @@ const copyFile = () => {
     });
 };
 
-module.exports = { writeFile, copyFile};
+module.exports = { writeFile, copyFile };
